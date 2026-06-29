@@ -8,7 +8,7 @@ for (const city of cities) {
   for (const route of routes) {
     const path = route ? `/${city}/${route}` : `/${city}`;
 
-    test(`route opens: ${path}`, async ({ page }) => {
+    test(`should open city route: ${path}`, async ({ page }) => {
       const response = await page.goto(path, {
         waitUntil: 'domcontentloaded',
       });
